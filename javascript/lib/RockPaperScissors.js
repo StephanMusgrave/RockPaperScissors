@@ -4,6 +4,26 @@ PAIRS = {
         'scissors' : 'paper'
     };
 
+PAIRS = {
+        'rock' : 'scissors',
+        'paper' : 'rock',
+        'scissors' : 'paper'
+    };
+
+Rock = 0
+Paper = 1
+Scissors = 2
+Lizard = 3
+Spock = 4
+
+var LOOKUP_TABLE = new Array(5);
+  for (var index = 0; i < 5; i++) {
+    x[index] = new Array(5);
+  }
+
+  
+  // x[0][0] = 'Win'
+
 function Player(name) {
   // initialize
   this.name = name;
