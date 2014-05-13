@@ -47,7 +47,6 @@ describe("Rock-Paper-Scissors", function() {
         player1.chooses('paper');
         player2.chooses('rock');
         expect(game.winner()).toBe(player1);
-
       });
 
       it('should lose to scissors', function() {
@@ -55,7 +54,6 @@ describe("Rock-Paper-Scissors", function() {
         player1.chooses('paper');
         player2.chooses('scissors');
         expect(game.winner()).toBe(player2);
-
       });
 
       it('should lose to lizard', function() {
@@ -132,7 +130,7 @@ describe("Rock-Paper-Scissors", function() {
 
     });
 
-describe('spock', function() {
+    describe('spock', function() {
 
       it('should lose to paper', function() {
 
