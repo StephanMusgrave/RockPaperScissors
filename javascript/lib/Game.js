@@ -4,17 +4,18 @@ function Game(player1, player2) {
 }
 
 Game.prototype.PAIRS = {
-        rock:     { scissors: 'crushes', lizzard: 'squashes'},
-        paper:     { rock: 'covers', spock: 'disproves'},
+        rock:     { scissors: 'crushes', lizard: 'squashes'},
+        paper:    { rock: 'covers', Spock: 'disproves'},
         scissors: { paper: 'cuts', lizard: 'decapitates'},
-        lizard:   { spock: 'poisons,', paper: 'eats'},
-        spock:    { rock: 'vapourises', scissors: 'smashes'}
+        lizard:   { Spock: 'poisons,', paper: 'eats'},
+        Spock:    { rock: 'vapourises', scissors: 'smashes'}
     }
 
 // var LOOKUP_TABLE = new Array(5);
 //   for (var index = 0; i < 5; i++) {
 //     x[index] = new Array(5);
-  
+   
+
 //   // x[0][0] = 'Win'
 
 
@@ -37,9 +38,9 @@ Game.prototype.winningMessage = function() {
   var message;
 
   if (this.winner()) {
-    message = [this.winner().name,
+    message = [this.winner().name, this.winner().choice, 
     this._victoryVerbFor(this.winner().choice, this.loser().choice),
-    this.loser().name].join(' ');
+    this.loser().name, this.loser().choice].join(' ');
   } else {
       message = 'Draw';
   }

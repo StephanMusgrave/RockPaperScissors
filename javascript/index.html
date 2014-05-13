@@ -8,7 +8,8 @@
       margin: 15px 0 0 30px;
     }
 
-    .choices img {
+    .choices .choice {
+      display: inline-block;
       width: 15%;
       margin-right: 2.5%;
       cursor: pointer;
@@ -20,33 +21,57 @@
       opacity: 1;
     }
 
+    title {
+      color: #faf;
+    }
+
     h2, h3 {
       text-transform: capitalize;
+      text-align: center;
     }
 
     #results {
       list-style: none;
+      margin-left: 20%;
     }
 
     #results li {
+      text-align: center;
       background: #999;
       color: #fff;
       font-size: 24px;
       border-radius: 8px;
       padding: 5px;
-      width: 80%;
+      width: 45%;
+      
       margin-bottom: 10px;
+      display: none;
     }
     </style>
   </head>
   <body>
-    <h1>Rock Paper Scissors Lizard Spock</h1>
+    <h1><span>Take your pick:</span></h1>
     <div class='choices'>
-      <img src="images/rock2.jpg" data-choice='rock'/>
-      <img src="images/paper4.jpg" data-choice='paper'/>
-      <img src="images/scissors2.png" data-choice='scissors'/>
-      <img src="images/lizard3.jpeg" data-choice='lizard'/>
-      <img src="images/spock2.jpeg" data-choice='spock'/>
+      <div class='choice'>
+        <img src="images/rock2.jpg" width="200" hieght="200" data-choice='rock'/>
+        <h3>Rock</h3>
+      </div>
+      <div class='choice'>
+        <img src="images/paper6.jpg" width="200" hieght="200" data-choice='paper'/>
+        <h3>Paper</h3>
+      </div>
+      <div class='choice'>
+        <img src="images/scissors2.png" width="200" hieght="200" data-choice='scissors'/>
+        <h3>Scissors</h3>
+      </div>
+      <div class='choice'>
+        <img src="images/lizard3.jpeg" width="200" hieght="200" data-choice='lizard'/>
+        <h3>Lizard</h3>
+      </div>
+      <div class='choice'>
+        <img src="images/spock2.jpeg" width="200" hieght="200" data-choice='Spock'/>
+        <h3>Spock</h3>
+      </div>
     </div>
     <ul id="results">
     </ul>
@@ -58,13 +83,19 @@
       $(document).ready(function(){
         var alex = new Player('Alex');
         var tony = new Player('Tony');
-        var game = new Game(alex, tony)
+        var human = new Player('your');
+        var computer = new Player("my");
+        var game = new Game(human, computer)
 
         $('.choices img').on('click', function(){
-          alex.chooses($(this).data('choice'));
-          tony.chooses('rock');
+          human.chooses($(this).data('choice'));
+          computer.randomChoice();
 
           $('#results').prepend('<li>' + game.winningMessage() + '</li>');
+          $('#results li').slideDown(1500);
+          $('li:nth-child(2)').fadeOut(9000, function(){
+            $(this).remove()
+          })
         })
       })
     </script>
