@@ -134,30 +134,30 @@ describe("Rock-Paper-Scissors", function() {
 
 describe('spock', function() {
 
-      it('should beat paper', function() {
+      it('should lose to paper', function() {
 
-        player1.chooses('lizard');
+        player1.chooses('spock');
         player2.chooses('paper');
-        expect(game.winner()).toBe(player1);
+        expect(game.winner()).toBe(player2);
       });
 
-      it('should lose to rock', function() {
+      it('should beat rock', function() {
 
-        player1.chooses('lizard');
+        player1.chooses('spock');
         player2.chooses('rock');
-        expect(game.winner()).toBe(player2);
-      });
-
-      it('should lose to scissors', function() {
-        player1.chooses('lizard');
-        player2.chooses('scissors');
-        expect(game.winner()).toBe(player2);
-      });
-
-      it('should beat Spock', function() {
-        player1.chooses('lizard');
-        player2.chooses('spock');
         expect(game.winner()).toBe(player1);
+      });
+
+      it('should beat scissors', function() {
+        player1.chooses('spock');
+        player2.chooses('scissors');
+        expect(game.winner()).toBe(player1);
+      });
+
+      it('should lose to lizard', function() {
+        player1.chooses('spock');
+        player2.chooses('lizard');
+        expect(game.winner()).toBe(player2);
       });
 
     });
