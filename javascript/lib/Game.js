@@ -7,7 +7,7 @@ Game.prototype.PAIRS = {
         rock:     { scissors: 'crushes', lizard: 'squashes'},
         paper:    { rock: 'covers', Spock: 'disproves'},
         scissors: { paper: 'cuts', lizard: 'decapitates'},
-        lizard:   { Spock: 'poisons,', paper: 'eats'},
+        lizard:   { Spock: 'poisons', paper: 'eats'},
         Spock:    { rock: 'vapourises', scissors: 'smashes'}
     }
 
@@ -42,7 +42,7 @@ Game.prototype.winningMessage = function() {
     this._victoryVerbFor(this.winner().choice, this.loser().choice),
     this.loser().name, this.loser().choice].join(' ');
   } else {
-      message = 'Draw';
+      message = ["Draw - we both chose" , this.player1.choice].join(' ');
   }
   return message;
 }
