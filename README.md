@@ -1,6 +1,9 @@
 # Rock, Paper, Scissors, Lizard, Spock Game
+Week 7 project at Makers Academy
 
-## Objectives
+![](public/images/rockpaperscissors.png)
+
+## Learning Objectives
 
 ## How to run it
 [App on Heroku]
@@ -10,21 +13,9 @@
 |Technology                 |Used for                        |
 |---------------------------|--------------------------------|
 |Ruby                       |Programming language            |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-
+|Sinatra                    |Web application library         |
+| Javascript |programming language for websites|
+| Jquery |a cross-platform JavaScript library designed to simplify the client-side scripting of HTML |
 
 ## Developed by
 
