@@ -1,5 +1,5 @@
 # Rock, Paper, Scissors, Lizard, Spock Game
-Week 7 project at Makers Academy
+Week 7 project at [Makers Academy]
 ![](javascript/public/images/rockpaperscissors_.png)
 
 ## Learning Objectives
@@ -22,3 +22,4 @@ Week 7 project at Makers Academy
 
 [Steve Musgrave]:https://github.com/StephanMusgrave
 [App on Heroku]:http://rockpaperscissorsslizardspock.herokuapp.com/
+[Makers Academy]:http://www.makersacademy.com
